@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Math for Kids Vue</title>
+	<link rel='stylesheet' href='css/notie.min.css'/>
+	<link rel='stylesheet' href='css/style.css'/>
+</head>
+
+<body>
+	<div id="app">
+		<header><h1>Math for Kids</h1></header>
+		<score :current-score="currentScore" :total="total"></score>
+		<question :no1="no1" :no2="no2" :operator="operator"></question>
+		<answers :options="options" :is-active="isActive" :add-active-class="addActiveClass"></answers>
+
+		<div id="button">
+			<button type="button" @click="checkSolution">{{text}}</button>
+		</div>
+	</div>
+
+	<script src='js/notie.min.js'></script>
+	<script src='js/vue.min.js'></script>
+	<script src='js/app.js'></script>
+</body>
+</html>
