@@ -90,6 +90,7 @@ new Vue({
 		generateOptions: function() {
 			var operators = ['+','-'];
 			var options = [];
+			this.operator = operators[this.randomNumber(0,2)];
 			this.correctAnswer = this.calculateMath(+this.no1,+this.no2,this.operator);
 			options.push(+this.correctAnswer);
 			while(options.length != 4) {
