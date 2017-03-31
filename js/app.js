@@ -101,6 +101,10 @@ new Vue({
 			this.options = this.shuffle(options);
 		},
 		checkSolution: function() {
+			if(this.isActive.indexOf(true) == -1) {
+			  notie.alert({ type: 4, text: 'Dumbass. Select the answer !!!', time: 3 });
+			  return;
+			}
 			if(this.text == 'Show Answer') {
 				this.checkCorrectAnswer(this.selectedAnswer);
 				this.text = 'Next';
